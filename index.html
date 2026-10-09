@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PhoneCat — Tiny Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="node_modules/angular/angular.min.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body ng-controller="PhoneListController as catalog">
+    <main>
+      <p class="eyebrow">PHONECAT / ANGULARJS DEMO</p>
+      <h1>Three classic phones.</h1>
+      <p class="intro">A tiny catalog, ready for modernization.</p>
+      <ul aria-label="Phone catalog">
+        <li ng-repeat="phone in catalog.phones" ng-bind="phone"></li>
+      </ul>
+      <footer>Adapted from Google's MIT-licensed AngularJS PhoneCat tutorial.</footer>
+    </main>
+  </body>
+</html>
